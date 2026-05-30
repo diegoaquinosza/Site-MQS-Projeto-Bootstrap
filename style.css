@@ -1,0 +1,29 @@
+/* ==================== TRANSIÇÕES DE TEMA ==================== */
+body {
+    /* Garante uma animação sutil e elegante ao trocar de modo claro/escuro */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==================== ACESSIBILIDADE ==================== */
+.fonte-acessivel {
+    /* Substitui a família de fontes por uma de alta legibilidade */
+    font-family: Verdana, sans-serif !important;
+    /* Aumenta o espaçamento entre caracteres para facilitar a leitura */
+    letter-spacing: 0.05rem;
+}
+
+/* ==================== IDENTIDADE VISUAL MQS ==================== */
+/* Injeta a paleta Teal customizada do MQS nas classes padrão do Bootstrap */
+.btn-primary {
+    background-color: #00897B;
+    border-color: #00897B;
+}
+
+.btn-primary:hover {
+    background-color: #00816b;
+    border-color: #00816b;
+}
+
+.text-primary {
+    color: #00897B !important;
+}
