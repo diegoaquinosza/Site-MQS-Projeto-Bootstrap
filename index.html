@@ -1,116 +1,190 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-bs-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MQS - Bootstrap 5</title>
+    <title>MQS - Mano, Qual é a Sala?!</title>
     <!-- CDN do CSS do Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Estilo Personalizado Local -->
     <link rel="stylesheet" href="style.css">
     <!-- Comportamento Dinâmico Local -->
     <script src="script.js" defer></script>
 </head>
-<body class="bg-light text-dark">
+
+<body class="text-body d-flex flex-column min-vh-100">
 
     <!-- ==================== HEADER ==================== -->
-    <header class="bg-white border-bottom shadow-sm">
+    <header class="sticky-top shadow-sm bg-body-tertiary">
         <!-- Barra de Navegação Semântica -->
-        <nav class="navbar navbar-expand-lg navbar-light container-fluid px-4 justify-content-between">
-            
+        <nav class="navbar navbar-expand-lg container-fluid px-4 justify-content-between">
+
             <!-- Marca (Brand) -->
-            <a class="navbar-brand fw-bold text-primary" href="#">MQS</a>
-            
+            <a class="navbar-brand fw-bold text-primary" href="#">
+                MQS
+            </a>
+
             <!-- Grupo de Acessibilidade (Alinhado à Direita) -->
             <nav class="d-flex gap-2">
-                <button id="btn-theme" class="btn btn-outline-secondary btn-sm" aria-label="Alternar tema escuro/claro">
-                    Tema
+                <button id="btn-font" class="btn btn-outline-secondary btn-sm"
+                    aria-label="Alternar fonte para modo acessível">
+                    🔤 Fonte Acessível
                 </button>
-                <button id="btn-font" class="btn btn-outline-secondary btn-sm" aria-label="Alternar fonte acessível">
-                    Fonte Acessível
+                <button id="btn-theme" class="btn btn-outline-secondary btn-sm"
+                    aria-label="Alternar tema claro e escuro">
+                    🌓 Tema
                 </button>
             </nav>
             <!-- /nav de acessibilidade -->
-            
+
         </nav>
         <!-- /nav principal -->
     </header>
     <!-- /header principal -->
 
     <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
-    <main>
-        
+    <main class="flex-grow-1">
+
         <!-- Seção Hero -->
-        <section id="hero" class="container mt-5 text-center">
-            
+        <section id="hero" class="container py-5 mt-4 text-center">
+
             <!-- Cabeçalho da Seção -->
             <header class="mb-4">
-                <h1 class="display-4 fw-bold">Sua grade horária na palma da mão</h1>
-                <p class="lead text-muted">
-                    O MQS é um aplicativo inteligente projetado para ajudar alunos e professores do IFTO a localizarem suas salas de aula, laboratórios e horários de forma ágil, simples e acessível.
+                <h1 class="display-4 fw-bold text-primary mb-3">Mano, Qual é a Sala?!</h1>
+                <p class="lead text-muted mx-auto" style="max-width: 700px;">
+                    Eficiência e UX no Cotidiano Acadêmico. Projetado para ser um assistente ágil e intuitivo,
+                    eliminando a burocracia e simplificando o seu acesso às informações de salas de aula e horários do
+                    IFTO.
                 </p>
             </header>
             <!-- /cabeçalho da seção -->
 
             <!-- Botão de Ação -->
-            <a href="#features" class="btn btn-primary btn-lg" role="button">Conheça as Funcionalidades</a>
+            <a href="#funcionalidades" class="btn btn-primary btn-lg px-5 shadow" role="button">
+                Conheça as Funcionalidades
+            </a>
 
         </section>
         <!-- /seção hero -->
 
+        <!-- Seção: Problema vs Solução -->
+        <section id="contexto" class="bg-body-tertiary py-5 mt-5">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+
+                    <div class="col-md-6">
+                        <h2 class="h3 fw-bold mb-3 text-primary">O Fim da Fricção Tecnológica</h2>
+                        <p class="text-muted lead fs-6">
+                            Portais acadêmicos frequentemente apresentam interfaces burocráticas e lentas. O MQS aplica
+                            a <strong>Lei de Hick</strong> para reduzir opções na tela, acelerando a tomada de decisões
+                            e diminuindo a sua carga cognitiva diária.
+                        </p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <ul class="list-group list-group-flush rounded-3 shadow-sm">
+                            <li class="list-group-item bg-body d-flex align-items-center p-3">
+                                <span class="fs-4 me-3 text-primary">⚡</span>
+                                <div>
+                                    <strong class="d-block text-dark-emphasis">Acesso Imediato</strong>
+                                    <small class="text-muted">Sua sala em poucos segundos.</small>
+                                </div>
+                            </li>
+                            <li class="list-group-item bg-body d-flex align-items-center p-3">
+                                <span class="fs-4 me-3 text-primary">📱</span>
+                                <div>
+                                    <strong class="d-block text-dark-emphasis">Mobile-First</strong>
+                                    <small class="text-muted">Perfeito para a tela do seu celular.</small>
+                                </div>
+                            </li>
+                            <li class="list-group-item bg-body d-flex align-items-center p-3">
+                                <span class="fs-4 me-3 text-primary">🧠</span>
+                                <div>
+                                    <strong class="d-block text-dark-emphasis">Persistência Local</strong>
+                                    <small class="text-muted">Sem logins repetitivos (Zero Login).</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- /seção: problema vs solução -->
+
         <!-- Seção de Funcionalidades -->
-        <section id="funcionalidades" class="container mt-5">
-            
-            <h2 class="text-center mb-4">Recursos do MQS</h2>
+        <section id="funcionalidades" class="container py-5 mt-4">
+
+            <header class="text-center mb-5">
+                <h2 class="h2 fw-bold text-primary">Funcionalidades Inteligentes</h2>
+                <p class="text-muted">Tudo que você precisa, estruturado com HTML5 Semântico e Vanilla JS.</p>
+            </header>
 
             <!-- Grid do Bootstrap -->
             <div class="row g-4">
-                
-                <!-- Coluna 1: Busca Direcionada -->
+
+                <!-- Coluna 1: Acesso Rápido -->
                 <div class="col-md-4">
                     <article class="card h-100 shadow-sm border-0">
-                        <header class="card-header bg-primary text-white py-3">
-                            <h3 class="h5 mb-0">Busca Direcionada</h3>
+                        <header class="card-header bg-transparent border-0 pt-4 pb-0 text-center">
+                            <span class="display-6">📶</span>
+                            <h3 class="h5 card-title fw-bold mt-2">Acesso Rápido</h3>
                         </header>
                         <div class="card-body">
-                            <p class="card-text text-muted">
-                                Encontre rapidamente o local exato da sua aula através de filtros inteligentes por curso, período e turno.
+                            <p class="card-text text-muted text-center small">
+                                Salve seus horários e locais favoritos no dispositivo para consultas offline
+                                instantâneas.
                             </p>
                         </div>
+                        <!-- Mockup de Demonstração -->
+                        <img src="assets/images/acesso_rapido2.PNG" class="card-img-bottom px-3 pb-3"
+                            alt="Interface de dashboard de acesso rápido e favoritos do MQS">
                     </article>
-                    <!-- /card busca direcionada -->
+                    <!-- /card acesso rápido -->
                 </div>
                 <!-- /coluna 1 -->
 
-                <!-- Coluna 2: Grade Personalizada -->
+                <!-- Coluna 2: Busca Direcionada -->
                 <div class="col-md-4">
                     <article class="card h-100 shadow-sm border-0">
-                        <header class="card-header bg-success text-white py-3">
-                            <h3 class="h5 mb-0">Grade Personalizada</h3>
+                        <header class="card-header bg-transparent border-0 pt-4 pb-0 text-center">
+                            <span class="display-6">🧭</span>
+                            <h3 class="h5 card-title fw-bold mt-2">Busca Direcionada</h3>
                         </header>
                         <div class="card-body">
-                            <p class="card-text text-muted">
-                                Monte e visualize seu quadro de horários semanal de forma intuitiva, adaptada à sua rotina acadêmica.
+                            <p class="card-text text-muted text-center small">
+                                Encontre rapidamente o local exato da sua aula através de filtros inteligentes por
+                                curso, período e turno.
                             </p>
                         </div>
+                        <!-- Mockup de Demonstração -->
+                        <img src="assets/images/busca_direcionada2.PNG" class="card-img-bottom px-3 pb-3"
+                            alt="Interface de busca direcionada de salas do MQS">
                     </article>
-                    <!-- /card grade personalizada -->
+                    <!-- /card busca direcionada -->
                 </div>
                 <!-- /coluna 2 -->
 
-                <!-- Coluna 3: Acesso Rápido -->
+                <!-- Coluna 3: Grade Personalizada -->
                 <div class="col-md-4">
                     <article class="card h-100 shadow-sm border-0">
-                        <header class="card-header bg-info text-white py-3">
-                            <h3 class="h5 mb-0">Acesso Rápido</h3>
+                        <header class="card-header bg-transparent border-0 pt-4 pb-0 text-center">
+                            <span class="display-6">📅</span>
+                            <h3 class="h5 card-title fw-bold mt-2">Grade Personalizada</h3>
                         </header>
                         <div class="card-body">
-                            <p class="card-text text-muted">
-                                Salve seus horários e locais favoritos no dispositivo para consultas offline instantâneas.
+                            <p class="card-text text-muted text-center small">
+                                Monte e visualize seu quadro de horários semanal de forma intuitiva, adaptada à sua
+                                rotina acadêmica.
                             </p>
                         </div>
+                        <!-- Mockup de Demonstração -->
+                        <img src="assets/images/grade_personalizada2.PNG" class="card-img-bottom px-3 pb-3"
+                            alt="Interface de grade de horários personalizada do MQS">
                     </article>
-                    <!-- /card acesso rápido -->
+                    <!-- /card grade personalizada -->
                 </div>
                 <!-- /coluna 3 -->
 
@@ -120,19 +194,41 @@
         </section>
         <!-- /seção de funcionalidades -->
 
+        <!-- Seção de Chamada para Ação (CTA) -->
+        <section id="chamada-acao" class="container my-5 py-5 text-center bg-body-tertiary rounded shadow-sm">
+
+            <h2 class="h4 fw-bold mb-3 text-primary">Chega de sufoco em todo início de semestre!</h2>
+            <p class="lead mb-4 text-muted">
+                A pergunta <strong>"Mano, Qual é a Sala?!"</strong> agora tem uma resposta definitiva e instantânea na
+                palma da sua mão.
+            </p>
+            <a href="https://mqsapp.com.br/" class="btn btn-primary btn-lg px-5 py-3 fw-bold shadow" target="_blank"
+                rel="noopener noreferrer" role="button">
+                Acesse e use o MQS agora!
+            </a>
+
+        </section>
+        <!-- /seção de chamada para ação -->
+
     </main>
     <!-- /conteúdo principal -->
 
     <!-- ==================== RODAPÉ PRINCIPAL ==================== -->
-    <footer class="bg-white text-center py-4 mt-5 border-top">
-        <p class="mb-0 text-muted">
-            &copy; 2026 MQS - Mano, Qual é a Sala?! - Todos os direitos reservados. 
-            Desenvolvido em parceria institucional com o <a href="https://www.ifto.edu.br" class="text-primary text-decoration-none fw-bold" target="_blank" rel="noopener noreferrer">IFTO</a>.
-        </p>
+    <footer class="bg-dark text-white py-4 mt-auto text-center border-top">
+        <div class="container">
+            <p class="mb-1 fw-bold">Landing Page - MQS</p>
+            <p class="small text-white-50 mb-0">Programação para Web Designers • Prof. Wilson Wolf</p>
+            <p class="small text-white-50 mt-2">
+                Desenvolvido por DIEGO AQUINO SOUZA, PAULO RICARDO SOUSA SILVA, LUIZA PALMA ALMEIDA MAIA
+            </p>
+        </div>
     </footer>
     <!-- /rodapé principal -->
 
     <!-- CDN do JS do Bootstrap 5 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
